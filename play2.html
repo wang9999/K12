@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>九宫格</title>
+    <style type="text/css">
+        div{
+            width:190px;
+            height:190px;
+            background:#FFA600;
+            float:left;
+            margin:10px;
+            border-radius: 10px;
+        }
+        body{
+            width:700px;
+            margin:0 auto;
+        }
+        button{
+            clear:both;
+            width:200px;
+            height:50px;
+            background:#FFA600;
+            border:none;
+            border-radius:10px;
+            position:relative;
+            left:115px;
+            outline: none;
+        }
+        button:hover{
+            background:#FFF;
+        }
+    </style>
+</head>
+<body>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<button id="btnone">开始闪</button>
+<button id="btntwo">结束闪</button>
+<script type="text/javascript">
+ var div=document.getElementsByClassName('div');
+ var  colors=['red','blue','green','pink','brown','cyan','black'];
+ btnone.onclick=function(){
+     c=setInterval(function (){
+  start();
+     },3000)
+ }
+ btntwo.onclick=function(){
+     for(i=0;i<div.leugth;i++){
+  div[i].style.background="#FFA600"
+     }
+     clearInterval(c);
+ }
+ function start() {
+ for (var i=0;i<div.length;i++){
+  div[i].style.background="#FFA600"
+ }
+ var arr=new Array(3);
+ var  arrl=new Array(3);
+ for(var i=0;i<arr.length;i++) {
+console.log(i)
+     var a = parseInt(Math.random() * 9);
+     console.log(a);
+     if (i==0) {
+         arr[i] = a;
+     } else {
+         for (var j = 0; j < i; j++) {
+             if (a = arr[j]) {
+                 i--
+             } else {
+                 arrl[i] = a;
+             }
+         }
+     }
+ }
+for(var i=0;i<arr.length;i++){
+ div[arr[i]].style.background=colors[arrl[i]];
+ }
+ }
+</script>
+</body>
+</html>

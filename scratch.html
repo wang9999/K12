@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script type="text/javascript" src="swfobject.js"></script>
+<script type="text/javascript">
+    var fwidth = 483;	// flash view width
+    var fheight = 387; 	// flash view height
+    installPlayer('Scratch.swf', 'PlayerOnly');
+    function installPlayer(swfName, swfID) {
+        var flashvars = {
+            project: 'scratchfiles.sb2',
+            autostart: 'false'
+        };
+        var params = {
+            allowScriptAccess: 'always',
+            allowFullScreen: 'true'
+        };
+        var attributes = {};
+        swfobject.embedSWF(swfName, swfID, fwidth, fheight, '10.0', false, flashvars, params, attributes);
+    }
+</script>
+<div id="PlayerOnly" style="margin: auto;">
+    <p style="margin: auto; padding: 2px; WIDTH: 270px;  BACKGROUND-COLOR: #FFFFCC; text-align: center; font-size: 9pt; height: 90px;  left:60px;">
+        <br />
+        Scris Robot ����˵������ Scratch�ļ� �С���<br />
+        <br />
+        ��� Scratch�ļ�������Sb2�ļ��� �ܾ�δ�ܼ���,<br />
+        <br />
+        ��ȷ���Ƿ��Ѱ�װ<a href="http://get.adobe.com/flashplayer/">Flash���</a>��汾�Ƿ�̫�ͣ�</p>
+</div>&nbsp;
+<!--Play with Flash Player ../Plugins/scratch/ -->
+</body>
+</html>
