@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>菜鸟教程(runoob.com)</title>
+    <script src="https://cdn.bootcss.com/jquery/1.8.3/jquery.min.js"></script>
+
+</head>
+<body>
+<!--<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"-->
+        <!--codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,16,0"-->
+        <!--width="320" height="400" >-->
+    <!--<param name="movie" value="flash6005.swf">-->
+    <!--<param name="quality" value="high">-->
+    <!--<param name="play" value="true">-->
+    <!--<param name="LOOP" value="false">-->
+    <!--<embed src="flash6005.swf" width="320" height="400" play="true" loop="false" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer"-->
+           <!--type="application/x-shockwave-flash">-->
+    <!--</embed>-->
+<!--</object>-->
+<div class="left">
+    <iframe id="rightPic" style="border:0;" scrolling="no" src="right.html" ></iframe>
+    <iframe id="rightPic2" style="width:234px;height:180px; border:0;margin-left:-6px;margin-top:-8px; display:none;" scrolling="no" class="left" src="video.htm" ></iframe>
+</div>
+<script type="text/javascript">
+    //------------判断浏览器-----------
+    var Sys = {};
+    var ua = navigator.userAgent.toLowerCase();
+    var s;
+    (s = ua.match(/msie ([\d.]+)/)) ? Sys.ie = s[1] :
+            (s = ua.match(/firefox\/([\d.]+)/)) ? Sys.firefox = s[1] :
+                    (s = ua.match(/chrome\/([\d.]+)/)) ? Sys.chrome = s[1] :
+                            (s = ua.match(/opera.([\d.]+)/)) ? Sys.opera = s[1] :
+                                    (s = ua.match(/version\/([\d.]+).*safari/)) ? Sys.safari = s[1] : 0;
+    //------------判断浏览器-----------
+
+    $(function () {
+        $("#marquee").kxbdMarquee();
+        try {
+            if (Sys.ie.toString() == "6.0") {
+                //$("#mainRight").css("padding-left", "7");
+
+                $("#middlelogo div").attr("class", "left");
+
+                $("#rightlogo").css({ "width": "233", "margin-left": "3" });
+                $("#rightlogo div").attr("class", "left rightlogo");
+                $("#rightlogo img").css("width", "233");
+                $("#rightlogo div:first").attr("class", "left");
+                $("#rightPic").css({ "src": "right2.html", "width": "233", "margin-left": "0" });
+
+                $("#bottomlogo img").css("width", "796").attr("class", "left");
+            }
+            else {
+            }
+        }
+        catch (e) { }
+        try {
+            if (ua.indexOf('android') > -1 || ua.indexOf('linux') > -1) {
+                $("#rightPic").css("display", "none");
+                $("#rightPic2").css("display", "");
+            }
+        }
+        catch (e) { }
+    });
+</script>
+</body>
+</html>
