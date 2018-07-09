@@ -1,0 +1,109 @@
+@charset "utf-8";
+/* CSS Document */
+
+.bottom {
+	width: 100%;
+	background-color: #373737;
+	float: left;
+	margin-top:21px;
+}
+
+/*.bear-1 {
+	width: 113px;
+	height: 102px;
+	margin: 40px auto 0 auto;
+	background-image: url(../images/bear-1.jpg);
+}*/
+
+.icon {
+	width: 122px;
+	height: 26px;
+	margin: 36px auto 0 auto;
+}
+
+/* icon样式 */
+.top-icons {
+	width:122px;
+	height:26px;
+}
+.top-icons ul {
+	padding: 0;
+}
+
+.top-icons ul li {
+	display: inline-block;
+	margin-left: 4px;
+	list-style: none;
+	float:left;
+}
+
+.top-icons ul li a span {
+	width: 26px;
+	height: 26px;
+	display: inline-block;
+	background: url(../images/top-icons.jpg) no-repeat;
+	vertical-align: middle;
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+
+.top-icons ul li a.xlwb span {
+	background-position: 0px 0px;
+}
+
+.top-icons ul li a.xlwb span:hover {
+	background-position: 0px -31px;
+}
+
+.top-icons ul li a.txwb span {
+	background-position: -31px 0px;
+}
+
+.top-icons ul li a.txwb span:hover {
+	background-position: -31px -31px;
+}
+
+.top-icons ul li a.qq span {
+	background-position: -62px 0px;
+}
+
+.top-icons ul li a.qq span:hover {
+	background-position: -62px -31px;
+}
+
+.top-icons ul li a.rss span {
+	background-position: -82px 0px;
+}
+
+.top-icons ul li a.sns_weixin span {
+	background-position: -94px 0px;
+}
+
+.top-icons ul li a.sns_weixin span:hover {
+	background-position: -94px -31px;
+}
+
+#weixin_code {
+	width: 76px;
+	height: 79px;
+	position: relative;
+	z-index: 99999999;
+	background-image: url(../images/wxt.png);
+	background-repeat: no-repeat;
+	margin: 0px 0 0 70px;
+	top:38px;
+	opacity:0;
+	display:block;
+}
+
+.bottom p {
+	text-align: center;
+	line-height: 18px;
+	margin-top: 22px;
+	margin-bottom:36px;
+	font-family: "微软雅黑";
+	font-size: 12px;
+	color: #666;
+}

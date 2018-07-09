@@ -1,0 +1,18 @@
+img { border: 0;}
+/*å¤´éƒ¨å›¾ç‰‡æ»šåŠ¨*/
+.focusindex {width:960px; height:320px; overflow: hidden; position: relative; margin-top:24px;}
+
+/*æ•°å­—æŒ‰é’®æ ·å¼*/
+.focusindex .num {width:100%; height:30px; position:absolute; bottom: 0; text-align: center; z-index: 10 }
+.focusindex .num ul{ display: inline-block;}
+.focusindex .num li {display: inline-block; _display: inline; _zoom: 1; width: 8px; height: 8px; _font-size: 0; margin: 3px 3px; cursor: pointer; background:#fff; z-index: 10; border-radius: 50%; float: left; }
+.focusindex .num li.on { background: #FFB800;} /*å½“å‰é¡¹*/
+
+/*ä¸Šä¸€ä¸ª  ä¸‹ä¸€ä¸ª*/
+.focusindex .preNext { width:36px; height:36px; position: absolute; top:50%; margin-top: -16px; background: url(../images/sprite.png) no-repeat left bottom; cursor: pointer; z-index: 9; opacity: 0; transition: all 0.3s linear 0s; }
+.focusindex .prev { left: -4%; z-index: 10 }
+.focusindex .next { right: -4%; background-position: right bottom; z-index: 10 }
+.focusindex:hover .preNext { opacity: 0.2; }
+.focusindex:hover .prev { left: 2%; }
+.focusindex:hover .next { right: 2%; }
+.focusindex .prev:hover, .focusindex .next:hover { opacity:0.6; }
