@@ -83,14 +83,11 @@
 <script src=phosphorus.js></script>
 <script src=player.js></script>
 <script>
-
 (function() {
   'use strict';
   var prefix = 'https://scratch.mit.edu/projects/';
-
   var initialId = location.hash.substr(1);
   if (initialId === 'zip') initialId = '';
-
   var titleArea = document.querySelector('#title-area');
   var playerArea = document.querySelector('#player-area');
   var projectArea = document.querySelector('#project-area');
