@@ -13,13 +13,13 @@
 </div>
 </div>
 <div class=error>
-<div>
-  <h1>phosphorus</h1>
-  <p>An error has occurred. <a id=bug-link href=https://github.com/nathan/phosphorus/issues/new>Click here</a> to file a bug report on GitHub.</p>
-</div>
+<!--<div>-->
+  <!--<h1>phosphorus</h1>-->
+  <!--<p>An error has occurred. <a id=bug-link href=https://github.com/nathan/phosphorus/issues/new>Click here</a> to file a bug report on GitHub.</p>-->
+<!--</div>-->
 </div>
 <script src=fonts.js></script>
-<script src=//cdnjs.cloudflare.com/ajax/libs/jszip/2.4.0/jszip.js></script>
+<script src=jszip.js></script>
 <script src=lib/rgbcolor.js></script>
 <script src=lib/StackBlur.js></script>
 <script src=lib/canvg.js></script>
@@ -72,11 +72,11 @@
     stage.draw();
   }
 
-  function showError(e) {
-    error.style.display = 'table';
-    bugLink.href = 'https://github.com/nathan/phosphorus/issues/new?title=' + encodeURIComponent(projectTitle || '') + '&body=' + encodeURIComponent('\n\n\nhttp://scratch.mit.edu/projects/' + projectId + '\nhttp://phosphorus.github.io/#' + projectId + (e.stack ? '\n\n```\n' + e.stack + '\n```' : ''));
-    console.error(e.stack);
-  }
+  // function showError(e) {
+  //   error.style.display = 'table';
+  //   bugLink.href = 'https://github.com/nathan/phosphorus/issues/new?title=' + encodeURIComponent(projectTitle || '') + '&body=' + encodeURIComponent('\n\n\nhttp://scratch.mit.edu/projects/' + projectId + '\nhttp://phosphorus.github.io/#' + projectId + (e.stack ? '\n\n```\n' + e.stack + '\n```' : ''));
+  //   console.error(e.stack);
+  // }
 
   window.addEventListener('resize', layout);
 
