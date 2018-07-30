@@ -63,7 +63,7 @@ li {
 	text-align: center;
 	line-height: 14px;
 	list-style-type: none;
-	background-image: url(../images/dot.png);
+
 	cursor: pointer;
 	display: inline-block;
 	width: 14px;
@@ -76,7 +76,7 @@ li {
 	width: 14px;
 	height: 14px;
 	line-height: 14px;
-	background: url(../images/dot.png) right 0 no-repeat;
+
 	cursor: pointer;
 }
 
@@ -231,13 +231,6 @@ li {
 	transition: color .2s ease-in;
 	text-decoration: none;
 }
-/*.wenzi2{width:120px;height:220px;position:absolute;filter:alpha(opacity:70);opacity:0.7;background:#FAFAFA;}
-.wenzi2 h3{color:#333;font-size:18px;font-family:"microsoft yahei";margin-left:20px;margin-top:33px;}
-.xinyu{color:#999;margin-left:20px;margin-top:6px;font-size:13px;font-family:"microsoft yahei";}
-.category .warp .wenzi p{color:#999;margin-left:20px;}*/
-/* 分类END */
-
-/* 首页新闻推荐调用 */
 .main4 .boxLeft {
 	width: 417px;
 	float: left;
@@ -357,7 +350,7 @@ li {
 }
 .main2 li{
 	width:300px;
-	height:236;
+	/*height:236;*/
 	float:left;
 	margin-right:30px;
 }
