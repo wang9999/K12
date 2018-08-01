@@ -4,8 +4,13 @@
 .content2{
     display: none;
 }
-
-
+.self{
+    margin-top: 35px;
+}
+.introduce{
+    line-height: 20px;
+    font-size: 1.5rem;
+}
 @media screen and (max-width: 780px) {
 
    .content1{

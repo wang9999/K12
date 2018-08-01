@@ -1,0 +1,13 @@
+.main2{
+    display: block;
+}
+.vadio{
+    display: none;}
+@media screen and (max-width: 780px) {
+    .main2 {
+     display: none;
+    }
+    .vadio{
+        display: block;
+    }
+}
