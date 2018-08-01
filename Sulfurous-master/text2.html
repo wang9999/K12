@@ -1,0 +1,404 @@
+<html class="wf-donegalone-n4-active wf-gloriahallelujah-n4-active wf-permanentmarker-n4-active wf-mysteryquest-n4-active wf-active"><head><meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>zhangzhichen 在 Scratch 上 · sulfurous</title>
+    <link rel="icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="css/player.css">
+    <link rel="stylesheet" href="css/index.css">
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js" type="text/javascript" async=""></script><script type="text/javascript" src="js/qrcode.min.js"></script>
+    <script src="js/socket.io.js"></script><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Donegal+One%7CGloria+Hallelujah%7CPermanent+Marker%7CMystery+Quest&amp;subset=latin,latin,latin,latin" media="all">
+
+</head><body><div class="area" id="title-area" style="height: 0px; transition: height 0.2s;">
+    <h1 class="title">sulfurous<span class="version">WebGL v 0.94</span></h1>
+    <p>Sulfurous, just like Phosphorus, runs your Scratch projects really fast by compiling them to JavaScript. Try it out by pasting a URL or project ID into the field below or <a class="dropdown">choosing an example<select id="examples">
+        <option value="">
+        </option><option value="11397100">3D Remix by DadOfMrLog
+    </option><option value="15945630">O by DCPU-16
+    </option><option value="10128407">Paper Minecraft by griffpatch
+    </option><option value="16207935">Alone in the depths by sticku
+    </option><option value="16205373">3D Framework by DadOfMrLog
+    </option><option value="31903442">gb.sb2 [Dr. Mario] by DCPU-16
+    </option><option value="34791164">gb.sb2 [Mario Land 2] by DCPU-16
+    </option><option value="21554369">Epic Ninja by griffpatch
+    </option><option value="15832807">Pretty by blob8108
+
+    </option></select></a>. You can also drag a local .sb2 project onto this page.</p>
+</div>
+
+<div class="area" id="player-area" style="height: 393px; transition: height 0.2s;">
+    <div class="controls">
+        <span class="stop"></span>
+        <span class="pause"></span>
+        <span class="flag" title="Shift+click to enable turbo mode."></span>
+        <div class="turbo" style="display: none;">Turbo Mode</div>
+        <span class="full-screen"></span>
+    </div>
+    <div class="player"><div style="position: absolute; overflow: hidden; width: 480px; height: 360px; font-size: 10px; background: rgb(255, 255, 255); user-select: none; transform: translateZ(0px);"><canvas width="480" height="360" id="backdropCanvas" style="position: absolute; width: 480px; height: 360px;"></canvas><canvas width="480" height="360" id="penCanvas" style="position: absolute; width: 480px; height: 360px;"></canvas><canvas width="480" height="360" id="canvas" tabindex="0" style="outline: none; position: absolute; width: 480px; height: 360px;"></canvas><canvas width="480" height="360" id="glCollisionCanvas" style="display: none; position: absolute; width: 480px; height: 360px;"></canvas><div style="z-index: 1; pointer-events: auto; position: absolute; right: 1.4em; left: 1.4em; bottom: 0.6em; padding: 0.5em 3em 0.5em 0.5em; border: 0.3em solid rgb(46, 174, 223); border-radius: 0.8em; background: rgb(255, 255, 255); display: none;"><div style="cursor: default; font: bold 1.3em sans-serif; margin: 0px -1.92308em 0.384615em 0px; white-space: pre; overflow: hidden; text-overflow: ellipsis;"></div><input style="border: 0px; background: rgb(238, 238, 238); box-sizing: border-box; font: 1.3em sans-serif; padding: 0px 0.230769em; outline: 0px; margin: 0px; width: 100%; height: 1.53846em; display: block; border-radius: 0px; box-shadow: rgba(0, 0, 0, 0.2) 0.0769231em 0.0769231em 0.153846em inset, rgba(255, 255, 255, 0.2) -0.0769231em -0.0769231em 0.0769231em inset; -webkit-appearance: none;"><div style="width: 2.2em; height: 2.2em; position: absolute; right: 0.4em; bottom: 0.4em; background: url(&quot;/img/icons.svg&quot;) -16.5em -3.7em / 32em 9.6em;"></div></div></div></div>
+    <div class="internal-error" style="display: none;">
+        An internal error occurred. <a id="error-bug-link" target="_blank" href="https://github.com/mittagskogel/sulfurous/issues/new">Click here</a> to file a bug report.
+    </div>
+    <div class="webgl-error" style="display: none;">
+        It looks like your device doesn't support WebGL. You can try viewing this project in the legacy player <a id="legacy-link" target="_blank" href="https://sulfurous.aau.at/legacy">here</a>.
+    </div>
+</div>
+
+<div class="title">
+    <div class="progress-bar" style="display: none; width: 100%; opacity: 0;"></div>
+    <input class="url" value="https://scratch.mit.edu/projects/">
+    <a target="_blank" class="project-link" title="View project on Scratch" href="https://scratch.mit.edu/projects/236814942/"></a>
+</div>
+
+<div class="area" id="project-area" style="height: 473px; transition: height 0.2s;">
+    <section class="package">
+        <h1>Package this project</h1>
+        <p>Get a link to a web page that automatically runs your project.</p>
+        <p>
+            <a href="https://sulfurous.aau.at/html/app.html?id=236814942&amp;turbo=false&amp;full-screen=false&amp;aspect-x=&amp;aspect-y=&amp;resolution-x=480&amp;resolution-y=360" target="_blank" id="package-link">Package</a>
+            <input type="checkbox" id="package-turbo">
+            <label for="package-turbo">Turbo mode</label>
+            <br>
+            <input type="radio" id="package-full-screen" name="custom-resolution">
+            <label for="package-full-screen">Full screen</label>
+            <input type="checkbox" id="package-full-screen-aspect-ratio" disabled="">
+            <label for="package-full-screen-aspect-ratio">Custom full screen aspect:</label>
+            <input type="number" id="package-aspect-ratio-x" min="1," max="100" class="xyinput" disabled="">
+            <label for="full-screen-aspect-ratio">:</label>
+            <input type="number" id="package-aspect-ratio-y" min="1," max="100" class="xyinput" disabled="">
+            <br>
+            <input type="radio" id="package-standard-resolution" checked="" name="custom-resolution">
+            <label for="package-standard-resolution">480x360</label>
+            <input type="radio" id="package-double-resolution" name="custom-resolution">
+            <label for="package-double-resolution">960x720</label>
+            <input type="radio" id="package-custom-resolution" name="custom-resolution">
+            <label for="package-custom-resolution">Custom width:</label>
+            <input type="number" id="package-custom-resolution-x-value" min="1" max="16000" class="xyinput" disabled="">
+            <label for="package-custom-resolution">x</label>
+            <input type="number" id="package-custom-resolution-y-value" min="1" max="16000" class="xyinput" disabled="">
+        </p>
+    </section>
+
+    <section class="package">
+        <h1>Embed this project</h1>
+        <p>Include the sulfurous player in your web site.</p>
+        <p>
+            <input readonly="" id="embed-code">
+            <input type="checkbox" id="embed-auto-start" checked="">
+            <label for="embed-auto-start">Start automatically</label>
+            <input type="checkbox" id="embed-light-content">
+            <label for="embed-light-content">Light controls</label>
+            <input type="checkbox" id="embed-hide-controls">
+            <label for="embed-hide-controls">Hide UI</label>
+            <input type="radio" id="embed-standard-resolution" checked="" name="e-custom-resolution">
+            <label for="embed-standard-resolution">480x360</label>
+            <input type="radio" id="embed-double-resolution" name="e-custom-resolution">
+            <label for="embed-double-resolution">960x720</label>
+            <input type="radio" id="embed-custom-resolution" name="e-custom-resolution">
+            <label for="embed-custom-resolution">Custom width:</label>
+            <input type="number" id="embed-custom-resolution-x-value" min="1" max="16000" class="xyinput" disabled="">
+            <label for="package-custom-resolution">x</label>
+            <input type="number" id="embed-custom-resolution-y-value" min="1" max="16000" class="xyinput" disabled="">
+        </p>
+    </section>
+
+    <section>
+        <h1>Report a problem</h1>
+        <p>Sulfurous is still in development. <a id="bug-link" target="_blank" href="https://github.com/mittagskogel/sulfurous/issues/new?title=zhangzhichen%20%E5%9C%A8%20Scratch%20%E4%B8%8A&amp;body=%0A%0A%0Ahttps%3A%2F%2Fscratch.mit.edu%2Fprojects%2F236814942%2F%0Ahttps%3A%2F%2Fsulfurous.aau.at%2F%23236814942%0AMozilla%2F5.0%20(Windows%20NT%206.1%3B%20WOW64)%20AppleWebKit%2F537.36%20(KHTML%2C%20like%20Gecko)%20Chrome%2F67.0.3396.99%20Safari%2F537.36">Click here</a> to report a problem with this project. If you are the creator of this Project please publish your project on scratch that we can see the code and debug it. </p>
+    </section>
+</div>
+<section>
+    <h1>Credits</h1>
+    <p>Sulfurous was created by <a href="https://github.com/mittagskogel">Mittagskogel</a> and further developed by <a href="https://github.com/FRALEXGAMING">FRALEX</a> as part of their work at the <a href="https:\\www.aau.at">Alpen-Adria-University Klagenfurt</a>. Sulfurous is based off Phosphorus, which was created by <a href="https://github.com/nathan">Nathan Dinsmore</a>. Its CPS-style compilation and overall design was inspired by <a href="https://github.com/RHY3756547">Rhys Simpson</a>'s <a href="https://code.google.com/p/sb2-js/">sb2.js</a>. It would have more bugs if not for <a href="https://github.com/trumank">Truman Kilen</a>. It uses the <a href="https://stuk.github.io/jszip/">JSZip</a> library, created by <a href="https://github.com/stuk">Stuart Knightley</a>, <a href="https://github.com/dduponchel">David Duponchel</a>, Franz Buchinger, and <a href="https://github.com/aadsm">António Afonso</a>, to read <code>.sb2</code> files and compressed projects, and the <a href="https://code.google.com/p/canvg/">canvg</a> library, created by <a href="https://code.google.com/u/gabelerner@gmail.com/">Gabe Lerner</a>, to render SVGs in <code>&lt;canvas&gt;</code> elements.
+    </p><h1>Code</h1>
+    <p>Sulfurous is released under the MIT license, the source code for Sulfurous is available <a href="https://github.com/mittagskogel/sulfurous">on GitHub</a>. See <a href="https://github.com/nathan/phosphorus">Phosphorus</a> for the original version.</p>
+
+    <h1>QR-Code with Link to your Project</h1>
+    <br>
+    <div id="qrcode" title="https://sulfurous.aau.at/html/app.html?id=236814942&amp;turbo=false&amp;full-screen=false&amp;aspect-x=&amp;aspect-y=&amp;resolution-x=480&amp;resolution-y=360"><canvas width="256" height="256" style="display: none;"></canvas><img src="data:image/png;base64,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" style="display: block;"></div>
+</section>
+<img class="featured-image" alt="Sulfurous screenshot" src="img/featured_image">
+
+<script src="js/fonts.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/2.4.0/jszip.js"></script>
+<script src="js/gl-matrix-min.js"></script>
+<script src="js/phosphorus.js"></script>
+<script src="js/player.js"></script>
+<script src="js/shaders.js"></script>
+<script src="fonts/fonts.js"></script>
+<script src="js/socket.io.js"></script>
+
+<script>
+
+    (function() {
+        'use strict';
+
+        var qrcode = new QRCode("qrcode");
+
+        var prefix = 'https://scratch.mit.edu/projects/';
+
+        var initialId = location.hash.substr(1);
+        if (initialId === 'zip') initialId = '';
+
+        var titleArea = document.querySelector('#title-area');
+        var playerArea = document.querySelector('#player-area');
+        var projectArea = document.querySelector('#project-area');
+
+        playerArea.style.height = projectArea.style.height = 'auto';
+        var titleAreaHeight = titleArea.offsetHeight;
+        var playerAreaHeight = playerArea.offsetHeight;
+        var projectAreaHeight = projectArea.offsetHeight;
+        playerArea.style.height = projectArea.style.height = 0;
+
+        var examples = document.querySelector('#examples');
+        var urlInput = document.querySelector('.url');
+        urlInput.value = prefix + initialId;
+
+        var progressBar = document.querySelector('.progress-bar');
+        var player = document.querySelector('.player');
+        var projectLink = document.querySelector('.project-link');
+        var bugLink = document.querySelector('#bug-link');
+
+        /**********   Package   **********/
+        var packageLink = document.querySelector('#package-link');
+        var packageTurbo = document.querySelector('#package-turbo');
+
+        var packageFullScreen = document.querySelector('#package-full-screen');
+        var packageFullScreenAspectRatio = document.querySelector('#package-full-screen-aspect-ratio');
+        var packageAspectRatioX = document.querySelector('#package-aspect-ratio-x');
+        var packageAspectRatioY = document.querySelector('#package-aspect-ratio-y');
+
+        var packageStandardResolution = document.querySelector('#package-standard-resolution');
+        var packageDoubleResolution = document.querySelector('#package-double-resolution');
+        var packageCustomResolution = document.querySelector('#package-custom-resolution');
+        var packageCustomResolutionXValue = document.querySelector('#package-custom-resolution-x-value');
+        var packageCustomResolutionYValue = document.querySelector('#package-custom-resolution-y-value');
+
+        /**********    Embed    **********/
+        var embedCode = document.querySelector('#embed-code');
+        var embedAutoStart = document.querySelector('#embed-auto-start');
+        var embedLightContent = document.querySelector('#embed-light-content');
+        var embedHideControls = document.querySelector('#embed-hide-controls');
+        var embedStandardResolution = document.querySelector('#embed-standard-resolution');
+        var embedDoubleResolution = document.querySelector('#embed-double-resolution');
+        var embedCustomResolution = document.querySelector('#embed-custom-resolution');
+        var embedCustomResolutionXValue = document.querySelector('#embed-custom-resolution-x-value');
+        var embedCustomResolutionYValue = document.querySelector('#embed-custom-resolution-y-value');
+
+        var timeout;
+        urlInput.addEventListener('input', function() {
+            var ss = urlInput.selectionStart;
+            var se = urlInput.selectionEnd;
+            var url = urlInput.value;
+            var id = url.match(/\d+/g) || [''];
+            while (id.length > 1 && id.indexOf(P.player.projectId) > -1) {
+                id.splice(id.indexOf(P.player.projectId), 1);
+            }
+            id = id[0];
+            urlInput.value = url = prefix + id;
+            urlInput.selectionStart = urlInput.selectionEnd = Math.max(prefix.length, ss);
+            clearTimeout(timeout);
+            if (P.player.projectId !== id) {
+                timeout = setTimeout(function() {
+                    location.hash = '#' + id;
+                }, 300);
+            }
+        });
+        urlInput.addEventListener('focus', function() {
+            setTimeout(function() {
+                if (/\d/.test(urlInput.value)) {
+                    urlInput.select();
+                }
+            });
+        });
+
+        examples.addEventListener('change', function() {
+            if (examples.value) {
+                location.hash = '#' + examples.value;
+                examples.selectedIndex = 0;
+            }
+        });
+
+        window.addEventListener('hashchange', function() {
+            var id = location.hash.substr(1);
+            if (id !== 'zip') {
+                if (+id !== +id) id = '';
+                urlInput.value = prefix + id;
+            }
+            load(id);
+        });
+
+        function show(id) {
+            titleArea.style.height = id ? 0 : titleAreaHeight + 'px';
+            playerArea.style.height = id ? playerAreaHeight + 'px' : 0
+            projectArea.style.height = id ? projectAreaHeight + 'px' : 0;
+            if (!id) urlInput.focus();
+        }
+
+        function load(id) {
+            if (id !== 'zip') {
+                show(id);
+            } else {
+                id = '';
+            }
+
+            document.title = 'sulfurous';
+            P.player.load(id, function(stage) {
+                stage.triggerGreenFlag();
+            }, function(title) {
+                document.title = title ? title + ' \xb7 sulfurous' : 'sulfurous';
+                updateBugLink();
+            });
+
+            projectLink.href = P.player.projectURL;
+            updateBugLink();
+            updatePackageLink();
+            updateEmbedCode();
+        }
+
+        function updateBugLink() {
+            bugLink.href = P.player.projectId ? 'https://github.com/mittagskogel/sulfurous/issues/new?title=' + encodeURIComponent(P.player.projectTitle || P.player.projectURL) + '&body=' + encodeURIComponent('\n\n\n' + P.player.projectURL + '\nhttps://sulfurous.aau.at/#' + P.player.projectId + '\n' + navigator.userAgent) : 'https://github.com/mittagskogel/sulfurous/issues/new?body=' + encodeURIComponent('\n\n\n' + navigator.userAgent);
+        }
+
+        function updatePackageLink() {
+            if(packageFullScreen.checked){
+                packageCustomResolutionXValue.value = null;
+                packageCustomResolutionYValue.value = null;
+
+                if(!packageFullScreenAspectRatio.checked){
+                    packageAspectRatioX.value = 4;
+                    packageAspectRatioY.value = 3;
+                }
+            }
+            else{
+                packageAspectRatioX.value = null;
+                packageAspectRatioY.value = null;
+            }
+            if(packageStandardResolution.checked){
+                packageCustomResolutionXValue.value = 480;
+                packageCustomResolutionYValue.value = 360;
+            }
+            if(packageDoubleResolution.checked){
+                packageCustomResolutionXValue.value = 960;
+                packageCustomResolutionYValue.value = 720;
+            }
+            // remember to change link before uploading!
+            packageLink.href = P.player.projectId ? 'https://sulfurous.aau.at/html/app.html?id=' + P.player.projectId +
+                '&turbo=' + packageTurbo.checked +
+                '&full-screen=' + packageFullScreen.checked +
+                '&aspect-x=' + packageAspectRatioX.value +
+                '&aspect-y=' + packageAspectRatioY.value +
+                '&resolution-x=' + packageCustomResolutionXValue.value +
+                '&resolution-y=' + packageCustomResolutionYValue.value :
+                'about:blank';
+            packageCustomResolutionXValue.disabled = !packageCustomResolution.checked;
+            packageCustomResolutionYValue.disabled = !packageCustomResolution.checked;
+
+            packageFullScreenAspectRatio.disabled = !packageFullScreen.checked;
+            packageAspectRatioX.disabled = !(packageFullScreenAspectRatio.checked && packageFullScreen.checked);
+            packageAspectRatioY.disabled = !(packageFullScreenAspectRatio.checked && packageFullScreen.checked);
+
+            qrcode.makeCode(packageLink.href);
+
+        }
+
+        packageTurbo.addEventListener('change', updatePackageLink);
+        packageFullScreen.addEventListener('change', updatePackageLink);
+        packageFullScreenAspectRatio.addEventListener('change', updatePackageLink);
+        packageAspectRatioX.addEventListener('change', updatePackageLink);
+        packageAspectRatioY.addEventListener('change', updatePackageLink);
+        packageStandardResolution.addEventListener('change', updatePackageLink);
+        packageDoubleResolution.addEventListener('change', updatePackageLink);
+        packageCustomResolution.addEventListener('change', updatePackageLink);
+        packageCustomResolutionXValue.addEventListener('change', updatePackageLink);
+        packageCustomResolutionYValue.addEventListener('change', updatePackageLink);
+
+        function updateEmbedCode(e) {
+            if(embedStandardResolution.checked){
+                embedCustomResolutionXValue.value = 480;
+                embedCustomResolutionYValue.value = 360;
+            }
+            if(embedDoubleResolution.checked){
+                embedCustomResolutionXValue.value = 960;
+                embedCustomResolutionYValue.value = 480;
+            }
+            // remember to change link before uploading!
+            embedCode.value = P.player.projectId ? '<script src=\'https://sulfurous.aau.at/js/embed.js?id=' + P.player.projectId +
+                '&resolution-x=' + embedCustomResolutionXValue.value +
+                '&resolution-y=' + embedCustomResolutionYValue.value +
+                (embedHideControls.checked ? '&ui=false' :
+                    '&auto-start=' + embedAutoStart.checked +
+                    '&light-content=' + embedLightContent.checked) +
+                '\'></' + 'script>' : '';
+            embedCustomResolutionXValue.disabled = !embedCustomResolution.checked;
+            embedCustomResolutionYValue.disabled = !embedCustomResolution.checked;
+            embedAutoStart.disabled =
+                embedLightContent.disabled = embedHideControls.checked;
+            if (embedHideControls.checked) embedAutoStart.checked = true;
+            if (e) embedCode.focus();
+        }
+
+        function selectEmbedCode() {
+            setTimeout(function() {
+                embedCode.select();
+            });
+        }
+
+        embedCode.addEventListener('focus', selectEmbedCode);
+        embedCode.addEventListener('click', selectEmbedCode);
+        embedHideControls.addEventListener('change', updateEmbedCode);
+        embedAutoStart.addEventListener('change', updateEmbedCode);
+        embedLightContent.addEventListener('change', updateEmbedCode);
+        embedStandardResolution.addEventListener('change', updateEmbedCode);
+        embedDoubleResolution.addEventListener('change', updateEmbedCode);
+        embedCustomResolution.addEventListener('change', updateEmbedCode);
+        embedCustomResolutionXValue.addEventListener('change', updateEmbedCode);
+        embedCustomResolutionYValue.addEventListener('change', updateEmbedCode);
+
+        load(initialId);
+
+        setTimeout(function() {
+            function setTransition(el) {
+                el.style.WebkitTransition =
+                    el.style.MozTransition =
+                        el.style.OTransition =
+                            el.style.transition = 'height 0.2s';
+            }
+            setTransition(titleArea);
+            setTransition(playerArea);
+            setTransition(projectArea);
+        });
+
+        function cancel(e) {
+            e.preventDefault();
+            e.dataTransfer.dropEffect = 'copy';
+        }
+        document.body.addEventListener('dragover', cancel);
+        document.body.addEventListener('dragenter', cancel);
+
+        document.body.addEventListener('drop', function(e) {
+            e.preventDefault();
+
+            var f = e.dataTransfer.files[0];
+
+
+
+            if (f) {
+                location.hash = '#zip';
+                show('zip');
+                var ext = f.name.split('.').pop();
+                if (ext === 'sb2' || ext === 'zip') {
+                    var request = P.IO.loadSB2File(f);
+                } else if (ext === 'json') {
+                    request = P.IO.loadJSONFile(f);
+                }
+                if (request) {
+                    P.player.showProgress(request, function(stage) {
+                        stage.triggerGreenFlag();
+                    });
+                }
+            }
+        });
+
+    }());
+
+</script></body></html>

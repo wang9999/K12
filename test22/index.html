@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html class="wf-donegalone-n4-active wf-gloriahallelujah-n4-active wf-mysteryquest-n4-active wf-permanentmarker-n4-active wf-active">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>phosphorus</title>
+    <link rel="stylesheet" href="player.css">
+    <link rel="stylesheet" href="embed.css">
+    <link rel="stylesheet" href="css">
+</head>
+<body class=" has-ui">
+<div class="controls">
+    <div class="progress-bar" style="display: none; width: 100%; opacity: 0;"></div>
+    <span class="stop"></span>
+    <span class="pause"></span>
+    <span class="flag" title="Shift+click to enable turbo mode."></span>
+    <div class="turbo" style="display: none;">Turbo Mode</div>
+    <span class="full-screen"></span>
+</div>
+<div class="player">
+    <div style="position: absolute; overflow: hidden; width: 480px; height: 360px; font-size: 10px; background: rgb(255, 255, 255); user-select: none; transform: translateZ(0px);">
+        <canvas width="480" height="360" style="position: absolute; width: 480px; height: 360px;"></canvas>
+        <canvas width="480" height="360" style="position: absolute; width: 480px; height: 360px;"></canvas>
+        <canvas width="480" height="360" tabindex="0"
+                style="outline: none; position: absolute; width: 480px; height: 360px;"></canvas>
+        <div style="position: absolute; right: 1.4em; left: 1.4em; bottom: 0.6em; padding: 0.5em 3em 0.5em 0.5em; border: 0.3em solid rgb(46, 174, 223); border-radius: 0.8em; background: rgb(255, 255, 255); display: none;">
+            <div style="cursor: default; font: bold 1.3em sans-serif; margin: 0px -1.92308em 0.384615em 0px; white-space: pre; overflow: hidden; text-overflow: ellipsis;"></div>
+            <input style="border: 0px; background: rgb(238, 238, 238); box-sizing: border-box; font: 1.3em sans-serif; padding: 0px 0.230769em; outline: 0px; margin: 0px; width: 100%; height: 1.53846em; display: block; border-radius: 0px; box-shadow: rgba(0, 0, 0, 0.2) 0.0769231em 0.0769231em 0.153846em inset, rgba(255, 255, 255, 0.2) -0.0769231em -0.0769231em 0.0769231em inset; -webkit-appearance: none;">
+            <div style="width: 2.2em; height: 2.2em; position: absolute; right: 0.4em; bottom: 0.4em;"></div>
+        </div>
+        <div style="max-width: 9.07143em; min-width: 3.42857em; padding: 0.571429em 0.714286em; border: 0.214286em solid rgb(160, 160, 160); border-radius: 0.714286em; background: rgb(255, 255, 255); position: absolute; font: bold 1.4em sans-serif; white-space: pre-wrap; word-wrap: break-word; text-align: center; cursor: default; display: none; left: 20.7857em; right: auto; bottom: 17.9286em;">
+            你是失败者
+            <div style="position: absolute; height: 1.5em; width: 3.14286em; "></div>
+        </div>
+    </div>
+</div>
+<!--<div class="internal-error" style="display: block;">-->
+<!--An internal error occurred. <a id="error-bug-link" target="_blank" href="https://github.com/nathan/phosphorus/issues/new?title=https%3A%2F%2Fscratch.mit.edu%2Fprojects%2F237132706%2F&amp;body=%0A%0A%0Ahttps%3A%2F%2Fscratch.mit.edu%2Fprojects%2F237132706%2F%0Ahttp%3A%2F%2Fphosphorus.github.io%2F%23237132706%0AMozilla%2F5.0%20(Windows%20NT%206.1%3B%20WOW64)%20AppleWebKit%2F537.36%20(KHTML%2C%20like%20Gecko)%20Chrome%2F67.0.3396.99%20Safari%2F537.36%0A%0A%60%60%60%0AError%3A%20Failed%20to%20execute%20'getImageData'%20on%20'CanvasRenderingContext2D'%3A%20The%20source%20height%20is%200.%0A%20%20%20%20at%20Sprite.touching%20(https%3A%2F%2Fphosphorus.github.io%2Fphosphorus.js%3A1643%3A37)%0A%20%20%20%20at%20eval%20(eval%20at%20scopedEval%20(https%3A%2F%2Fphosphorus.github.io%2Fphosphorus.js%3A4014%3A14)%2C%20%3Canonymous%3E%3A10%3A7)%0A%20%20%20%20at%20Stage.P.runtime.P.Stage.step%20(https%3A%2F%2Fphosphorus.github.io%2Fphosphorus.js%3A3938%3A15)%0A%60%60%60">Click here</a> to file a bug report.-->
+<!--</div>-->
+<script src="webfont.js" type="text/javascript" async=""></script>
+<script src="fonts.js"></script>
+<script src="jszip.js"></script>
+<script src="lib/rgbcolor.js"></script>
+<script src="lib/StackBlur.js"></script>
+<script src="lib/canvg.js"></script>
+<script src="phosphorus.js"></script>
+<script src="player.js"></script>
+<script>
+
+    (function () {
+        'use strict';
+
+        var projectId = 17088932;
+        var autoStart = false;
+        var lightContent = false;
+        var hasUI = true;
+
+        var params = location.search.substr(1).split('&');
+        params.forEach(function (p) {
+            var parts = p.split('=');
+            if (parts.length > 1) {
+                switch (parts[0]) {
+                    case 'id':
+                        projectId = Number(parts[1]);
+                        break;
+                    case 'auto-start':
+                        autoStart = parts[1] !== 'false';
+                        break;
+                    case 'light-content':
+                        lightContent = parts[1] !== 'false';
+                        break;
+                    case 'ui':
+                        hasUI = parts[1] !== 'false';
+                        break;
+                }
+            }
+        });
+
+        if (lightContent) document.body.className += ' light-content';
+        document.body.className += hasUI ? ' has-ui' : ' hide-ui';
+
+        document.title = 'phosphorus';
+        P.player.load(projectId, function (stage) {
+            if (autoStart || !hasUI) stage.triggerGreenFlag();
+        }, function (title) {
+            document.title = title ? title + ' \xb7 phosphorus' : 'phosphorus';
+        });
+
+    }());
+
+</script>
+</body>
+</html>

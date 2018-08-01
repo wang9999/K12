@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="//cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+</head>
+<body>
+<!--//首先导入一个Js文件-->
+<script type="text/javascript" src="filesaver.js" charset="utf-8"></script>
+
+<!--//HTML中添加一个导出元素-->
+<input type="button" id="export" value="导出"/>
+
+<!--//JS文件-->
+<script>
+    var blob = new Blob(["Hello, world!"], {type: "text/plain;charset=utf-8"});
+    saveAs(blob, "hello world.txt");
+</script>
+
+
+</body>
+</html>

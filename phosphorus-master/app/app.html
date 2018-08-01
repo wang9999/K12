@@ -12,18 +12,19 @@
   <div class=progress><div class=progress-bar></div></div>
 </div>
 </div>
-<!--<div class=error>-->
-<!--<div>-->
-  <!--<h1>phosphorus</h1>-->
-  <!--<p>An error has occurred. <a id=bug-link href=https://github.com/nathan/phosphorus/issues/new>Click here</a> to file a bug report on GitHub.</p>-->
-<!--</div>-->
-<!--</div>-->
+<div class=error>
+<div>
+  <h1>phosphorus</h1>
+  <p>An error has occurred. <a id=bug-link href=https://github.com/nathan/phosphorus/issues/new>Click here</a> to file a bug report on GitHub.</p>
+</div>
+</div>
 <script src=fonts.js></script>
 <script src=jszip.js></script>
 <script src=lib/rgbcolor.js></script>
 <script src=lib/StackBlur.js></script>
 <script src=lib/canvg.js></script>
 <script src=phosphorus.js></script>
+<script src=filesaver.js></script>
 <script>
 
 (function () {
@@ -87,7 +88,11 @@
   }
 
   var request = P.IO.loadScratchr2Project(237132706);
+    // localStorage.removeItem('UsertypeSelect');
+    // localStorage['UsertypeSelect']=JSON.stringify(request);
 
+    // var blob = new Blob([JSON.stringify(request)], {type: "text/plain;charset=utf-8"});
+    // saveAs(blob, "request.txt");
     console.log(request);
 
   request.onload = function (s) {

@@ -1,12 +1,19 @@
-
+.content1{
+    display: block;
+}
 .content2{
     display: none;
 }
+
+
 @media screen and (max-width: 780px) {
+
    .content1{
        display: none;
    }
     .content2{
         display: block;
+
     }
+
 }
